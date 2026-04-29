@@ -23,6 +23,7 @@
 - Personal note: When in doubt, prefer readability over cleverness. This is a learning repo — leave comments explaining non-obvious decisions.
 - Personal note (fork): I'm using this repo primarily to learn about multi-provider LLM routing. Focus extra attention on comments in `core/anthropic/` modules.
 - Personal note (fork): When adding comments in `core/anthropic/`, prefer step-by-step explanations over single-line summaries — I find it easier to follow the data flow that way.
+- Personal note (fork): When I ask about a bug or unexpected behavior, always suggest a minimal reproducible test case as part of the explanation.
 
 ## ARCHITECTURE PRINCIPLES (see PLAN.md)
 
@@ -34,5 +35,4 @@
 - **Performance**: Use list accumulation for strings (not `+=` in loops), cache env vars at init, prefer iterative over recursive when stack depth matters.
 - **Platform-agnostic naming**: Use generic names (e.g. `PLATFORM_EDIT`) not platform-specific ones (e.g. `TELEGRAM_EDIT`) in shared code.
 - **No type ignores**: Do not add `# type: ignore` or `# ty: ignore`. Fix the underlying type issue.
-- **Complete migrations**: When moving modules, update imports to the new owner and remove old compatibility shims in the same change unless preserving a published interface is explicitly required.
-- **Maximum Test Coverage**: There should be maximum tes
+- **Complete migrations**: When moving modules, update imports to the new 
