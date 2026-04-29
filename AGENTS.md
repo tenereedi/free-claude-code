@@ -22,6 +22,7 @@
 - Code: Write the simplest code possible. Keep the codebase minimal and modular.
 - Personal note: When in doubt, prefer readability over cleverness. This is a learning repo — leave comments explaining non-obvious decisions.
 - Personal note (fork): I'm using this repo primarily to learn about multi-provider LLM routing. Focus extra attention on comments in `core/anthropic/` modules.
+- Personal note (fork): When adding comments in `core/anthropic/`, prefer step-by-step explanations over single-line summaries — I find it easier to follow the data flow that way.
 
 ## ARCHITECTURE PRINCIPLES (see PLAN.md)
 
@@ -34,9 +35,4 @@
 - **Platform-agnostic naming**: Use generic names (e.g. `PLATFORM_EDIT`) not platform-specific ones (e.g. `TELEGRAM_EDIT`) in shared code.
 - **No type ignores**: Do not add `# type: ignore` or `# ty: ignore`. Fix the underlying type issue.
 - **Complete migrations**: When moving modules, update imports to the new owner and remove old compatibility shims in the same change unless preserving a published interface is explicitly required.
-- **Maximum Test Coverage**: There should be maximum test coverage for everything, preferably live smoke test coverage to catch bugs early
-
-## COGNITIVE WORKFLOW
-
-1. **ANALYZE**: Read relevant files. Do not guess.
-2. 
+- **Maximum Test Coverage**: There should be maximum tes
